@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://www.10wallpaper.com/wallpaper/1920x1080/1411/Blue_Light_Background-Abstract_widescreen_wallpaper_1920x1080.jpg);
+    font-family: sans-serif;
+    margin-top: 100px;
+}
+
+.cadastro{
+    width: 700px;
+    background-color: rgb(196, 255, 255);
+    margin: auto;
+    color: rgb(0, 0, 0);
+    padding: 20px 0px 20px 0px;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: inset 0 0 1em rgb(84, 89, 90), 0 0 1em rgb(6, 11, 88);
+}
+
+form{
+    padding: 10px;
+    font-size: 18px;
+}
+
+#nome{
+    width: 100%;
+    height: 100px;
+}
+
+.nome{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    font-weight: 700;
+}
+
+.primeironome{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.sobrenome{
+    position: relative;
+    left: 398px;
+    top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.primeirolabel{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 203px;
+    top: -45px;
+}
+
+.sobrenomelabel{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 172px;
+    top: -45px;
+}
+
+.departamento{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 415px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.departamentolabel{
+    position: relative;
+    margin-left: 25px;
+    top: -95px;
+    width: 125px;
+    font-weight: 700;
+}
+
+.cpf{
+    position: relative;
+    left: 45px;
+    top: -25px;
+    line-height: 40px;
+    width: 415px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.cpflabel{
+    position: relative;
+    margin-left: 25px;
+    top: -70px;
+    width: 125px;
+    font-weight: 700;
+}
+
+.password{
+    position: relative;
+    left: 113px;
+    top: -22px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.passconfirmation{
+    position: relative;
+    left: 20px;
+    top: -22px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.passconfirmationlabel{
+    position: relative;
+    text-transform: capitalize;
+    top: -24px;
+    font-size: 14px;
+    left: 440px;
+}
+
+.senhalabel{
+    position: relative;
+    margin-left: -41px;
+    top: -20px;
+    width: 125px;
+    font-weight: 700;
+}
+
+.passwordlabel{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: -115px;
+}
+
+.botao{
+    position: relative;
+    top: -20px;
+    left: 42%;
+    font-weight: 700;
+}
