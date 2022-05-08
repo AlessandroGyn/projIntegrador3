@@ -1,0 +1,15 @@
+[RF001] O sistema deve possuir um serviço para manter clientes (CRUD);
+
+[RF002] O sistema deve possuir um serviço para manter agendamentos (CRUD);
+
+[RF003] O sistema deve possuir um serviço para manter descontos (CRUD);
+
+[RF004] O sistema deve possuir um serviço para manter serviços (CRUD);
+
+[RF005] O sistema deve possuir um serviço de log-in;
+
+[RF006] O sistema deve possuir uma hierarquia entre tipos de usários;
+
+[RF007] O sistema deve possuir um serviço de estatística;
+
+[RF008] O sistema deve possuir um serviço de relatórios;
