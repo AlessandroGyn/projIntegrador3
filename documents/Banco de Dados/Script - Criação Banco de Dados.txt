@@ -2,26 +2,27 @@
 
 CREATE TABLE Usuarios (
     Usu_ID SERIAL PRIMARY KEY,
-    Usui_Nome VARCHAR(50),
-    fk_Usu_Telefone_Usu_Telefone_PK INT,
+    Usu_Nome VARCHAR(50),
+    fk_Usu_Telefone INT,
     Usu_End_Rua VARCHAR(50),
     Usu_End_Setor VARCHAR(50),
     Usu_End_CEP VARCHAR(8),
-    Usui_Login VARCHAR(50),
+    Usu_Login VARCHAR(50) UNIQUE,
     Usu_Senha VARCHAR(50),
     Usu_TipoAcesso VARCHAR(15)
 );
 
 CREATE TABLE Agendamentos (
     Age_ID SERIAL PRIMARY KEY,
-    Age_DataHoraMarcado TIMESTAMP,
-    Age_DataHoraInicio TIMESTAMP,
-    Age_DataHoraTermino TIMESTAMP,
+    Age_DataHoraMarcado TIMESTAMPTZ,
+    Age_DataHoraInicio TIMESTAMPTZ,
+    Age_DataHoraTermino TIMESTAMPTZ,
     Age_FoiCancelado BOOLEAN,
     Age_DuracaoEsperada INTERVAL,
     Age_DuracaoReal INTERVAL,
     Age_PrecoFinal DOUBLE PRECISION,
-    fk_Usuarios_Usu_ID SERIAL
+    fk_Usuarios_Usu_ID SERIAL,
+    fk_Descontos_Des_ID SERIAL
 );
 
 CREATE TABLE Servicos (
@@ -36,18 +37,19 @@ CREATE TABLE Descontos (
     Des_Nome VARCHAR(50),
     Des_Descricao VARCHAR(150),
     Des_Validade DATE,
-    Des_Codigo VARCHAR(10),
-    Des_MultiplicadorPreco DOUBLE PRECISION,
-    fk_Agendamentos_Age_ID SERIAL
+    Des_Codigo VARCHAR(10) UNIQUE,
+    Des_TipoMultiplicador BOOLEAN,
+    Des_DescontoMultiplicador DOUBLE PRECISION,
+    Des_DescontoFixo DOUBLE PRECISION
 );
 
 CREATE TABLE Usu_Telefone (
     Usu_Telefone_PK INT NOT NULL PRIMARY KEY,
-    Usu_Telefone VARCHAR(11),
-    Usu_Telefone VARCHAR(11),
-    Usu_Telefone VARCHAR(11),
-    Usu_Telefone VARCHAR(11),
-    Usu_Telefone VARCHAR(11)
+    Usu_Telefone1 VARCHAR(11),
+    Usu_Telefone2 VARCHAR(11),
+    Usu_Telefone3 VARCHAR(11),
+    Usu_Telefone4 VARCHAR(11),
+    Usu_Telefone5 VARCHAR(11)
 );
 
 CREATE TABLE Agendamento_do_Servico (
@@ -56,7 +58,7 @@ CREATE TABLE Agendamento_do_Servico (
 );
  
 ALTER TABLE Usuarios ADD CONSTRAINT FK_Usuarios_2
-    FOREIGN KEY (fk_Usu_Telefone_Usu_Telefone_PK)
+    FOREIGN KEY (fk_Usu_Telefone)
     REFERENCES Usu_Telefone (Usu_Telefone_PK)
     ON DELETE CASCADE;
  
@@ -65,9 +67,9 @@ ALTER TABLE Agendamentos ADD CONSTRAINT FK_Agendamentos_2
     REFERENCES Usuarios (Usu_ID)
     ON DELETE CASCADE;
  
-ALTER TABLE Descontos ADD CONSTRAINT FK_Descontos_2
-    FOREIGN KEY (fk_Agendamentos_Age_ID)
-    REFERENCES Agendamentos (Age_ID)
+ALTER TABLE Agendamentos ADD CONSTRAINT FK_Agendamentos_3
+    FOREIGN KEY (fk_Descontos_Des_ID)
+    REFERENCES Descontos (Des_ID)
     ON DELETE CASCADE;
  
 ALTER TABLE Agendamento_do_Servico ADD CONSTRAINT FK_Agendamento_do_Servico_1

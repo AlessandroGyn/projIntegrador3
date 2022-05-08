@@ -2,3 +2,4 @@
 - Administrador pode cancelar e serviço;
 - Usuário pode cancelar o serviço;
 
+- Verificar com o professor por quê não consigo colocar null nas Foreing Keys dos Agendamentos.
