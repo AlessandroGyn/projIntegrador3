@@ -1,0 +1,4 @@
+- Administrador poder cadastrar o cliente e o serviço na hora da venda;
+- Administrador pode cancelar e serviço;
+- Usuário pode cancelar o serviço;
+

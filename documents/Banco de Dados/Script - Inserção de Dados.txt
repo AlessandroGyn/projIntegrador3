@@ -1,0 +1,11 @@
+select * from Clientes
+
+insert into clientes (cli_nome, cli_end_rua, cli_end_setor, cli_end_cep, cli_login, cli_senha) values ('Leonardo', 'Rua A', 'Setor Sudoeste', '74305460', 'admin1', 'admin');
+insert into clientes (cli_nome, cli_end_rua, cli_end_setor, cli_end_cep, cli_login, cli_senha) values ('Divino', 'Rua B', 'Setor Morada do Sol', '75256443', 'admin2', 'admin');
+insert into clientes (cli_nome, cli_end_rua, cli_end_setor, cli_end_cep, cli_login, cli_senha) values ('Leonardo', 'Rua C', 'Setor Bueno', '74019551', 'admin3', 'admin');
+insert into clientes (cli_nome, cli_end_rua, cli_end_setor, cli_end_cep, cli_login, cli_senha) values ('Leonardo', 'Rua D', 'Setor Marista', '74156154', 'admin4', 'admin');
+insert into clientes (cli_nome, cli_end_rua, cli_end_setor, cli_end_cep, cli_login, cli_senha) values ('Saulo', 'Rua D', 'Residencial Guanabara', '74683127', 'admin5', 'admin');
+
+select * from Agendamentos
+
+insert into agendamentos (Age_DataHoraMarcado, Age_DataHoraInicio, Age_DataHoraTermino, Age_FoiCancelado, Age_DuracaoEsperada, Age_DuracaoReal, Age_PrecoFinal) values (2022-05-08, 2022)

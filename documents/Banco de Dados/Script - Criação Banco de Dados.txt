@@ -1,0 +1,81 @@
+/* Projeto Integrador 3 - Modelo Lógico: */
+
+CREATE TABLE Usuarios (
+    Usu_ID SERIAL PRIMARY KEY,
+    Usui_Nome VARCHAR(50),
+    fk_Usu_Telefone_Usu_Telefone_PK INT,
+    Usu_End_Rua VARCHAR(50),
+    Usu_End_Setor VARCHAR(50),
+    Usu_End_CEP VARCHAR(8),
+    Usui_Login VARCHAR(50),
+    Usu_Senha VARCHAR(50),
+    Usu_TipoAcesso VARCHAR(15)
+);
+
+CREATE TABLE Agendamentos (
+    Age_ID SERIAL PRIMARY KEY,
+    Age_DataHoraMarcado TIMESTAMP,
+    Age_DataHoraInicio TIMESTAMP,
+    Age_DataHoraTermino TIMESTAMP,
+    Age_FoiCancelado BOOLEAN,
+    Age_DuracaoEsperada INTERVAL,
+    Age_DuracaoReal INTERVAL,
+    Age_PrecoFinal DOUBLE PRECISION,
+    fk_Usuarios_Usu_ID SERIAL
+);
+
+CREATE TABLE Servicos (
+    Ser_ID SERIAL PRIMARY KEY,
+    Ser_Nome VARCHAR(50),
+    Ser_Descricao VARCHAR(150),
+    Ser_Preco DOUBLE PRECISION
+);
+
+CREATE TABLE Descontos (
+    Des_ID SERIAL PRIMARY KEY,
+    Des_Nome VARCHAR(50),
+    Des_Descricao VARCHAR(150),
+    Des_Validade DATE,
+    Des_Codigo VARCHAR(10),
+    Des_MultiplicadorPreco DOUBLE PRECISION,
+    fk_Agendamentos_Age_ID SERIAL
+);
+
+CREATE TABLE Usu_Telefone (
+    Usu_Telefone_PK INT NOT NULL PRIMARY KEY,
+    Usu_Telefone VARCHAR(11),
+    Usu_Telefone VARCHAR(11),
+    Usu_Telefone VARCHAR(11),
+    Usu_Telefone VARCHAR(11),
+    Usu_Telefone VARCHAR(11)
+);
+
+CREATE TABLE Agendamento_do_Servico (
+    fk_Agendamentos_Age_ID SERIAL,
+    fk_Servicos_Ser_ID SERIAL
+);
+ 
+ALTER TABLE Usuarios ADD CONSTRAINT FK_Usuarios_2
+    FOREIGN KEY (fk_Usu_Telefone_Usu_Telefone_PK)
+    REFERENCES Usu_Telefone (Usu_Telefone_PK)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Agendamentos ADD CONSTRAINT FK_Agendamentos_2
+    FOREIGN KEY (fk_Usuarios_Usu_ID)
+    REFERENCES Usuarios (Usu_ID)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Descontos ADD CONSTRAINT FK_Descontos_2
+    FOREIGN KEY (fk_Agendamentos_Age_ID)
+    REFERENCES Agendamentos (Age_ID)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Agendamento_do_Servico ADD CONSTRAINT FK_Agendamento_do_Servico_1
+    FOREIGN KEY (fk_Agendamentos_Age_ID)
+    REFERENCES Agendamentos (Age_ID)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Agendamento_do_Servico ADD CONSTRAINT FK_Agendamento_do_Servico_2
+    FOREIGN KEY (fk_Servicos_Ser_ID)
+    REFERENCES Servicos (Ser_ID)
+    ON DELETE RESTRICT;
