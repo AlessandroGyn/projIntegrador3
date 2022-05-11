@@ -59,16 +59,16 @@ body {
 }
 
 .input-lb input {
-    width: 100%;
-    padding: 10px 10px;
+    width: 10%;
+    padding: 10px 5px;
     display: inline-block;
     border: 0;
     border-bottom: 1px solid #00000080;
     background-color: transparent;
     outline: none;
     outline-color: transparent;
-    min-width: 350px;
-    font-size: 15px;
+    min-width: 280px;
+    font-size: 10px;
     transition: all .3s ease-out;
     border-radius: 0;
 
@@ -118,11 +118,11 @@ button {
     padding: 7px;
     font-weight: bold;
     font-size: 12px;
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
-    width: 40%;
+    width: 100px;
 
 }
 
