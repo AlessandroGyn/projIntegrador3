@@ -1,10 +1,10 @@
 /* Estilos aplicados a larguras até 979 pixels - celular/tablet !!! */
-@media (max-width: 979px) {
+@media (min-width: 979px) {
     /* estilos aqui */
 }
 
 /* Desktop grande */
-@media (min-width: 980px) {
+@media (max-width: 980px) {
    /* estilos aqui - menu superior e lateral*/
 }
 
@@ -65,7 +65,7 @@ nav.nav-splash {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-    position: fixed;
+    
 }
 
 #sidebar .h6 {
@@ -82,6 +82,23 @@ nav.nav-splash {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 30px;
+}
+
+.logo {
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.img_user {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+
 }
 
 #sidebar h1 .logo {
@@ -132,7 +149,7 @@ nav.nav-splash {
     color: #fff;
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 991px) {
     #sidebar {
         margin-left: -270px;
     }
@@ -140,6 +157,7 @@ nav.nav-splash {
         margin-left: 0;
     }
 }
+
 
 #sidebar .custom-menu {
     display: inline-block;
@@ -271,6 +289,20 @@ button:focus {
     display: block !important;
 }
 
-.invisivel {
+/*.invisivel {
     display: none !important;
+}*/
+
+a {
+
+    text-decoration: none;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    color: white;
+}
+
+a:hover {
+
+    color: #272222;
+
 }
