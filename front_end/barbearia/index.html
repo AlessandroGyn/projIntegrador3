@@ -1,12 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia</title>
-</head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
+        <TITLE>BARBEARIA</TITLE>
+        <link rel="icon" type="image/jpg" href="img/tesoura.png" />
+        <link type="text/css" rel="stylesheet" href="css/normalize.css" />
+        <link type="text/css" rel="stylesheet" href="css/select.bootstrap5.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-datepicker.css" />
+        <link type="text/css" rel="stylesheet" href="css/PNotifyConfirm.css" />
+        <link type="text/css" rel="stylesheet" href="css/PNotifyBrightTheme.css" />
+        <link type="text/css" rel="stylesheet" href="css/datatables.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/select.dataTables.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/searchPanes.dataTables.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+        <!--<link type="text/css" rel="stylesheet" href="css/summernote-lite.css" />-->
+        <link type="text/css" rel="stylesheet" href="css/estilos.css" />
+    </head>
+
 <body>
+
+    <div class="wrapper d-flex align-items-stretch ">
+        
+        <nav id="sidebar" class="invisivel">
+            <!-- botão toggle - fim -->
+            <div class="p-4 esconderBarraRolagem">
+                <!-- logo e nome  -->
+                <hr style="border-color: white;">
+                <h1 class="h1logo">
+                    <a href="" class="logoCeven semLink reloadCeven">
+                        <span class="titCeven ">CEVEN</span>
+                        <br>
+                        <span>Plataforma de Negócios</span>
+                    </a>
+                </h1>
+                <!-- logo e nome  -->
+
+                <hr style="border-color: white; opacity: 0.1;">
+
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a class="active mostraLink trocaPag invisivel" value="0" href=""><i class="fa fa-home mr-3"></i>Home</a>
+                    </li>
+                    <!--<li>
+                        <a class="mostraLink trocaPag invisivel" value="1" href=""><i class="fas fa-store-alt mr-3"></i>Contratação</a>
+                    </li>-->
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="2" href=""><i class="fas fa-search mr-3"></i>Pesquisa</a>
+                    </li>
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="3" href=""><i class="far fa-file-excel mr-3"></i>Analíticos</a>
+                    </li>
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="4" href=""><i class="fas fa-hourglass-half mr-3"></i>Histórico</a>
+                    </li>
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="5" href=""><i class="fas fa-chart-pie mr-3"></i>Relatórios</a>
+                    </li>
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="6" href=""><i class="fas fa-barcode mr-3"></i>Parâmetros</a>
+                    </li>
+                    <li>
+                        <a style="text-align: left;" value="8" class="mostraLink invisivel btn btn-primary " data-bs-toggle="collapse" href="#collapseMensagens" role="button" aria-expanded="false" aria-controls="collapseMensagens">
+                            <i class="far fa-envelope mr-3"></i> Modelo de Mensagens
+                        </a>
+                        <div class="collapse" id="collapseMensagens">
+                            <ul class="lista-sub">
+                                <li><a value="9" class="mostraLink invisivel trocaPag " href=""><i class="fas fa-envelope-open-text mr-3"></i>Modelos</a></li>
+                                <li><a value="10" class="mostraLink invisivel trocaPag " href=""><i class="fab fa-adversal mr-3"></i>Campos</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a style="text-align: left;" value="11" class="mostraLink invisivel btn btn-primary " data-bs-toggle="collapse" href="#collapseVVenda" role="button" aria-expanded="false" aria-controls="collapseVVenda">
+                            <i class="fas fa-coins mr-3"></i> Valor Venda
+                        </a>
+                        <div class="collapse" id="collapseVVenda">
+                            <ul class="lista-sub">
+                                <li><a value="12" class="mostraLink invisivel trocaPag " href=""><i class="far fa-calendar-times mr-3"></i>Desatualizado</a></li>
+                                <li><a value="13" class="mostraLink invisivel trocaPag " href=""><i class="fas fa-angle-double-down mr-3"></i>Abaixo do Recuperável</a></li>
+                                <li><a value="7" class="mostraLink invisivel trocaPag " href=""><i class="fas fa-biohazard mr-3"></i>Abaixo de Mil</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a style="text-align: left;" value="14" class="mostraLink invisivel btn btn-primary " data-bs-toggle="collapse" href="#collapseImpedidos" role="button" aria-expanded="false" aria-controls="collapseImpedidos">
+                            <span class="fas fa-user-slash mr-3"></span> Impedimentos
+                        </a>
+                        <div class="collapse" id="collapseImpedidos">
+                            <ul class="lista-sub">
+                                <li><a value="15" class="mostraLink invisivel trocaPag btnImpedimentos" href=""><i class="fas fa-user-slash mr-3"></i>Impedidos</a>
+                                    <ul class="lista-sub">
+                                        <li><a value="16" class="mostraLink invisivel trocaPag btnReincidentes" href=""><i class="fas fa-sync-alt mr-3"></i>Reincidentes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a value="17" class="mostraLink invisivel trocaPag btnImpedimentos_Unidade" href=""><i class="fas fa-store-alt-slash mr-3"></i>Unidades Impedidas</a></li>
+                                <li><a value="18" class="mostraLink invisivel trocaPag btnImpedimentos_Funcao" href=""><i class="fas fa-users-slash mr-3"></i>Funções Impedidas</a></li>
+                                <li><a value="19" class="mostraLink invisivel trocaPag btnImpedimentos_Relatorio" href=""><i class="fas fa-chart-pie mr-3"></i>Relatórios</a></li>
+                                <li><a value="20" class="mostraLink invisivel trocaPag btnImpedimentos_Configuracoes" href=""><i class="fas fa-cogs mr-3"></i>Configurações</a></li>
+                                <li><a value="21" class="mostraLink trocaPag invisivel btnImpedimentos_Historico" href=""><span class="fas fa-hourglass-half mr-3"></span>Histórico</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="22" href=""><i class="fas fa-external-link-alt mr-3"></i>Links Úteis</a>
+                    </li>
+                    <li>
+                        <a class="mostraLink trocaPag invisivel" value="23" href=""><i class="fas fa-info mr-3"></i>Tutorial</a>
+                    </li>
+                </ul>
+            </div>
+            <br><br><br><br><br><br><br><br>
+        </nav>
+
+        <div class="conteudoHP">
+
+            <!-- Conteúdo além do menu lateral -->
+            <header class="header">
+                <!-- Barra superior -->
+                <!-- botão toggle - início -->
+                <div class="custom-menu">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary_hamburger">
+                        <i class="fa fa-bars moveHamburger"></i>
+                        <span class="sr-only" >Toggle Menu</span>
+                    </button>
+                </div>
+                <img class="logo_caixa" src="./img/logo_caixa.png" alt="logo CAIXA" />
+                <h3 class="text-white">PLATAFORMA DE NEG&Oacute;CIOS - CEVEN</h3>
+                <!--<button type="button" class="btn btn-info text-white tutorial" data-bs-toggle="modal" data-bs-target="#tutorial">Tutorial</button>-->
+                <div class="user">
+                    <span style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Olá,&nbsp;<SPAN class="titNomeCompl"></SPAN></span>
+                    <img class="segImg sombraBox" src="./asp/pegaUserFoto.asp" alt="imagem do usuario" />
+                </div>
+            </header>
+
+            <div id="conteudo"></div>
+            <!-- div conteudo - esta é a div que recebe conteúdo -->
+
+            <!-- inicio Modal Mostra progresso -->
+            <div class="modal fade bd-example-modal-lg" id="modalMostraProgresso" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Processando...</h5>
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">
+                                        A
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <div id="divProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Modal Mostra progresso -->
+
+            <footer class="footer">
+                <div class="footer-info">
+                    <img src="img/logo_caixa.png" alt="Caixa Econômica Federal" class="logo_caixa">
+                    <span>2022 - CN Vendas de Bens</span>
+                    <span>Versão 1.0.0</span>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <!-- Seção de Scripts -->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- este precisa ficar antes do bootstrap.min-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.select.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.searchPanes.min.js"></script>
+    <!-- Configura as data do datatables, para serem corretamente ordenadas -->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/datetime-moment.js"></script>
+    <script type="text/javascript" src="js/date-pt-BR.js"></script>
+    <!-- os arquivos abaixo servem para que a tabela gerada possa ser copiada, exportada pro excel  -->
+    <script type="text/javascript" src="js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="js/buttons.html5.min.js"></script>
+    <!--<script type="text/javascript" src="js/jszip.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.table2excel.js"></script>
+    <script type="text/javascript" src="js/exportaTABtoExcel.js"></script>-->
+    <!-- <script src="js/Pega_Fake_To_Excel.js"></script> -->
+    <!-- Arquivos do PNotify -->
+    <script type="text/javascript" src="js/PNotify.js"></script>
+    <script type="text/javascript" src="js/PNotifyButtons.js"></script>
+    <script type="text/javascript" src="js/PNotifyConfirm.js"></script>
+    <!-- fontawesome -->
+    <script defer src="js/all.min.js"></script>
+    <!-- HighCharts 
+    <script src="js_Relatorios/highcharts.js"></script>
+    <script src="js_Relatorios/highcharts-more.js"></script>
+    <script src="js_Relatorios/exporting.js"></script>
+    <script src="js_Relatorios/export-data.js"></script> -->
+
+    <!-- Barra de progresso circular -->
+    <script type="text/javascript" src="js/CircularLoader-v1.3.js"></script>
+    <!-- Personalização do datatables -->
+    <!-- 
+        <script type="text/javascript" src="js/executaFiltros.js"></script>
+        -->
+    <!-- Arquivos Personalizados -->
+    <!--<script type="text/javascript" src="js/CarregaBotoes.js"></script>-->
+
     
 </body>
+
 </html>
