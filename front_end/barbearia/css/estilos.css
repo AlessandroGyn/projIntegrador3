@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
     min-height: 100px;
     font-family: cursive;
     color: #fff;
-    background: linear-gradient(to right, #005CA9, #009aff 150%);
+    background: #222222;
 }
 
 .header.header-splash,
@@ -72,7 +72,8 @@ nav.nav-splash {
     z-index: 100;
     min-width: 270px;
     max-width: 270px;
-    background: linear-gradient(to right, #003b9a, #003b9a);
+    background: linear-gradient(to right, #0f0f0f , #222222 150%);
+    box-shadow: 2px 2px 1px 0px #00000050;
     /*background: #3445b4;
   color: #fff;*/
     -webkit-transition: all 0.3s;
@@ -97,22 +98,28 @@ nav.nav-splash {
     font-size: 30px;
 }
 
-.logo {
-
-    display: flex;
-    justify-content: center;
-
-
-}
-
-.img_user {
-
+/* estilização da logo */
+.logo_barb {
+    
+    margin-left: 35%;
     width: 60px;
     height: 60px;
     border-radius: 50%;
 
 
 }
+
+.logo_conteudo{
+    float: left;
+    margin-top: 5%;
+    margin-left: 35%;
+}
+
+/* conteudo da página */
+#conteudo{
+    
+}
+
 
 #sidebar h1 .logo {
     color: #fff;
@@ -154,12 +161,12 @@ nav.nav-splash {
 
 #sidebar ul li a:hover {
     background: transparent;
-    color: #fff;
+    color: #aa8719;
 }
 
 #sidebar ul li a.active {
     background: transparent;
-    color: #fff;
+    color: #aa8719;
 }
 
 @media (min-width: 991px) {
@@ -242,10 +249,10 @@ nav.nav-splash {
 }
 
 .moveHamburger {
-    margin-left: 37px;
+    margin-left: 50px;
     width: 30px !important;
     height: 30px;
-    color: cornflowerblue;
+    color: #aa8719;
 }
 
 .sr-only {
@@ -306,20 +313,6 @@ button:focus {
     display: none !important;
 }*/
 
-a {
-
-    text-decoration: none;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    color: white;
-}
-
-a:hover {
-
-    color: #272222;
-
-}
-
 .mostraLink{
     border-right: 1px;
     border-right-color: #aa8719;
@@ -339,17 +332,19 @@ a:hover {
     border-right-style: solid;
     border-right-width: 2px;
     
-}
+}   
 
 .menuLista li:hover{
     cursor: pointer;
     transform: scale(1.1);
+    color: #aa8719;
 }
 
 .custom_hamburger{
     position: absolute;
-    float: left;
-    margin-right: 95%;
+    float: left; 
+    margin-top: 1%;
+    margin-left: 12%;
 }
 
 .custom_hamburger:hover{
