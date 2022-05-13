@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
         <TITLE>BARBEARIA</TITLE>
         <link rel="icon" type="image/jpg" href="img/tesoura.png" />
@@ -29,11 +29,18 @@
         <nav id="sidebar" class="invisivel">
             <!-- botão toggle - fim -->
             <div class="p-4 esconderBarraRolagem">
+                <!-- botão toggle - hamburger -->
+                <div class="custom_hamburger">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary_hamburger">
+                        <i class="fa fa-bars moveHamburger"></i>
+                        <span class="sr-only" >Toggle Menu</span>
+                    </button>
+                </div>
                 <!-- logo e nome  -->
                 <hr style="border-color: white;">
                 <h1 class="h1logo">
                     <a href="" class="logoCeven semLink reloadCeven">
-                        <span class="titCeven ">CEVEN</span>
+                        <span class="titCeven ">barber</span>
                         <br>
                         <span>Plataforma de Negócios</span>
                     </a>
@@ -117,35 +124,19 @@
         <div class="conteudoHP">
 
             <!-- Conteúdo além do menu lateral -->
-            <header class="header">
-                <!-- Barra superior -->
-                <!-- botão toggle - início -->
-                <div class="custom-menu">
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary_hamburger">
-                        <i class="fa fa-bars moveHamburger"></i>
-                        <span class="sr-only" >Toggle Menu</span>
-                    </button>
-                </div>
-                        <a class="active mostraLink trocaPag invisivel" value="0" href=""><i class="fa fa-home mr-3"></i>Home</a>
+            <div class="conteudoHeader">
+                <header class="header"> <!-- Barra superior -->
+                    <ul class="menuLista">
+                        <li class="active mostraLink trocaPag invisivel" value="0" href=""><i class="fa fa-home mr-3"></i>Home</li>
+                        <li class="mostraLink trocaPag invisivel" value="3" href=""><i class="fas fa-briefcase mr-3"></i>Serviços</li>
+                        <li class="mostraLink trocaPag invisivel" value="4" href=""><i class="fas fa-address-book mr-3"></i>Agendamento</li>
+                        <li class="mostraLink trocaPag invisivel" value="2" href=""><i class="fas fa-image mr-3"></i>Mídia</li>
+                        <li class="mostraLink trocaPag invisivel" value="5" href=""><i class="fas fa-question mr-3"></i>Quem Somos</li>
+                        <li class="mostraLink trocaPag invisivel" value="6" href=""><i class="fas fa-mobile mr-3"></i>Contato</li>
+                    </ul>
+                </header>
+            </div>
 
-                        <a class="mostraLink trocaPag invisivel" value="2" href=""><i class="fas fa-search mr-3"></i>Pesquisa</a>
-
-                        <a class="mostraLink trocaPag invisivel" value="3" href=""><i class="far fa-file-excel mr-3"></i>Analíticos</a>
-
-                        <a class="mostraLink trocaPag invisivel" value="4" href=""><i class="fas fa-hourglass-half mr-3"></i>Histórico</a>
-
-                        <a class="mostraLink trocaPag invisivel" value="5" href=""><i class="fas fa-chart-pie mr-3"></i>Relatórios</a>
-
-                        <a class="mostraLink trocaPag invisivel" value="6" href=""><i class="fas fa-barcode mr-3"></i>Parâmetros</a>
-                <!--<img class="logo_caixa" src="img/logo.jpg" alt="logo" />-->
-                <h3 class="text-white"></h3>
-                <!--<button type="button" class="btn btn-info text-white tutorial" data-bs-toggle="modal" data-bs-target="#tutorial">Tutorial</button>-->
-                <div class="user">
-                    <span style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Olá,&nbsp;<SPAN class="titNomeCompl"></SPAN></span>
-                    <img class="img_user" src="../cadastro2/img/usuario.png" alt="imagem do usuario" />
-                </div>
-
-            </header>
 
             <div id="conteudo"></div>
             <img class="logo" src="img/logo.jpg" alt="logo" />
@@ -173,7 +164,7 @@
 
             <footer class="footer">
                 <div class="footer-info">
-                    <img src="img/logo_caixa.png" alt="Caixa Econômica Federal" class="logo_caixa">
+                    <img src="img/logo_caixa.png" alt="Barbearia" class="logo_caixa">
                     <span>2022 - CN Vendas de Bens</span>
                     <span>Versão 1.0.0</span>
                 </div>

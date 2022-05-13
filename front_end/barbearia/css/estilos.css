@@ -1,11 +1,24 @@
 /* Estilos aplicados a larguras até 979 pixels - celular/tablet !!! */
-@media (min-width: 979px) {
+@media (max-width: 960px) {
     /* estilos aqui */
+    .conteudoHeader{
+        display: none;
+    }
+    #sidebar{
+        display: block;
+    }
 }
 
 /* Desktop grande */
-@media (max-width: 980px) {
+@media only screen and (min-width: 961px) {
    /* estilos aqui - menu superior e lateral*/
+   .conteudoHeader{
+       display: block;
+   }
+   
+   #sidebar{
+        display: none;
+    }
 }
 
 
@@ -27,7 +40,7 @@ body::-webkit-scrollbar {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 1.25rem;
     padding-left: 0px;
@@ -305,4 +318,40 @@ a:hover {
 
     color: #272222;
 
+}
+
+.mostraLink{
+    border-right: 1px;
+    border-right-color: #aa8719;
+}
+
+.menuLista{
+    display: inline-flex;
+    list-style-type: none;
+    transition: all .3s ease-out;
+    color: white;
+}
+
+.menuLista li{
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: #aa8719;
+    border-right-style: solid;
+    border-right-width: 2px;
+    
+}
+
+.menuLista li:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.custom_hamburger{
+    position: absolute;
+    float: left;
+    margin-right: 95%;
+}
+
+.custom_hamburger:hover{
+    transform: scale(1.1);
 }
