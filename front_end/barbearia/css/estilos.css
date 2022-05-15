@@ -1,21 +1,30 @@
-/* Estilos aplicados a larguras até 979 pixels - celular/tablet !!! */
-/**{
-    margin: 0;
-    padding: 0;
-}*/
-
-@media (max-width: 960px) {
-    /* estilos aqui */
+/* tela pequena */
+@media screen and (max-width: 960px) {
     .conteudoHeader{
         display: none;
     }
     #sidebar{
         display: block;
     }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        flex-wrap: wrap;
+        height: 50px;
+        background: #222222;
+    }
+    .logo_barb {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
 }
 
 /* Desktop grande */
-@media only screen and (min-width: 961px) {
+@media screen and (min-width: 961px) {
    /* estilos aqui - menu superior e lateral*/
    .conteudoHeader{
        display: block;
@@ -24,6 +33,23 @@
    #sidebar{
         display: none;
     }
+    .header {
+        width: 100%;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        height: 50px;
+        background: #222222;
+    }
+    .logo_barb {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
 }
 
 
@@ -31,8 +57,8 @@
 body {
     margin: 0;
     padding: 0;
-    scrollbar-width: none;
-    /* nao mostrar a barra de rolagem */
+    scrollbar-width: none; /* nao mostrar a barra de rolagem */
+    background: #222222;
 }
 
 body::-webkit-scrollbar {
@@ -71,16 +97,6 @@ nav.nav-splash {
 }
 
 /* estilização da logo */
-.logo_barb {
-    
-    margin-left: 27%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-
-
-}
-
 .logo_conteudo{
     
     display: flex;
@@ -102,7 +118,7 @@ nav.nav-splash {
     z-index: 100;
     min-width: 270px;
     max-width: 270px;
-    background: linear-gradient(to right, #0f0f0f , #222222 150%);
+    background: linear-gradient(to right, #222222 , #222222 150%);
     box-shadow: 2px 2px 1px 0px #00000050;
     /*background: #3445b4;
   color: #fff;*/
@@ -177,7 +193,7 @@ nav.nav-splash {
     color: #aa8719;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 961px) {
     #sidebar {
         margin-left: -270px;
     }
@@ -224,7 +240,6 @@ nav.nav-splash {
 }
 
 #sidebar .custom-menu .btn.btn-primary_hamburger:after {
-    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -234,8 +249,6 @@ nav.nav-splash {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    /*background: #3445b4;*/
-    /*background: linear-gradient(to right, #003b9a, #003b9a);*/
     border-radius: 10px;
 }
 
@@ -254,13 +267,24 @@ nav.nav-splash {
 
 .btn-primary_hamburger:hover {
     color: #fff;
+    border-color: transparent !important;
 }
 
 .moveHamburger {
-    margin-left: 50px;
     width: 30px !important;
     height: 30px;
     color: #aa8719;
+    transition: transform .2s;
+    
+}
+.moveHamburger:hover {
+    transform: scale(1.5);
+}
+
+.custom_hamburger{
+    background: #222222;
+    margin-left: 11%;
+    padding: 15px;
 }
 
 .sr-only {
@@ -348,17 +372,8 @@ button:focus {
     color: #aa8719;
 }
 
-.custom_hamburger{
-    position: sticky;
-    float: left; 
-    margin-left: 15%;
-}
-
-.custom_hamburger:hover{
-    transform: scale(1.1);
-}
-
-.footer{
-    height: 500px;
-    background: #222222;
+.divLogoBarb{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
