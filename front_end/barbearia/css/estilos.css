@@ -4,7 +4,15 @@
         display: none;
     }
     #sidebar{
+        margin-top: 70px;
         display: block;
+        position: fixed;
+
+    }
+    .custom_hamburger{
+        position: fixed;
+        box-shadow: 0 5px 50px rgb(0 0 0 / 15%);
+        z-index: 999;
     }
     .footer{
         display: flex;
@@ -20,6 +28,15 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
+    }
+    .logo_conteudo{
+    
+        
+        margin-top: 120px;
+        margin-left: 100px;
+        width: 400px;
+        height: 400px;
+        border-radius: 25%;
     }
 }
 
@@ -49,6 +66,14 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
+    }
+    .logo_conteudo{
+        
+        margin-left: 35%;
+        margin-top: 50px;
+        width: 400px;
+        height: 400px;
+        border-radius: 25%;
     }
 }
 
@@ -97,14 +122,7 @@ nav.nav-splash {
 }
 
 /* estilização da logo */
-.logo_conteudo{
-    
-    display: flex;
-    margin: auto;
-    width: 400px;
-    height: 400px;
-    border-radius: 25%;
-}
+
 
 /* conteudo da página */
 .conteudo{
@@ -281,9 +299,8 @@ nav.nav-splash {
     transform: scale(1.5);
 }
 
-.custom_hamburger{
-    background: #222222;
-    margin-left: 11%;
+.custom_hamburger{ 
+    margin-left: 92px;
     padding: 15px;
 }
 
