@@ -363,29 +363,39 @@ button:focus {
 }*/
 
 .mostraLink{
-    border-right: 1px;
-    border-right-color: #aa8719;
+    color: white;
 }
 
 .menuLista{
     display: inline-flex;
     list-style-type: none;
     transition: all .3s ease-out;
-    color: white;
 }
 
 .menuLista li{
-    padding-right: 15px;
-    padding-left: 15px;
     border-right: #aa8719;
     border-right-style: solid;
     border-right-width: 2px;
-    
 }   
 
-.menuLista li:hover{
-    cursor: pointer;
+ul li:hover{
     transform: scale(1.1);
+}
+
+.menuLista li a{
+    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.menuLista li a:hover{
+    cursor: pointer;
+    color: #aa8719;
+}
+
+.menuLista li a.active{
+    background: transparent;
     color: #aa8719;
 }
 
