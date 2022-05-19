@@ -1,6 +1,10 @@
 $('.trocaPag').on('click', function(event) {
     event.preventDefault()
     
+    /*if ($('#sidebar').css('margin-left') == '0px') { // preciso arrumar... quando a janela é menor que 960px, o click em um menu deve fechar o menu lateral
+        $('#sidebar').css('margin-left') = '-270px'
+    }*/
+    
     $('#sidebar div ul li a').removeClass('active') // remove active do menu lateral
     $('.menuLista li a').removeClass('active') // remove active do menu superior
 

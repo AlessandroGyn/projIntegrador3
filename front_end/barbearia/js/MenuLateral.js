@@ -6,7 +6,7 @@
 function aberturaHP() {
     $('#sidebar').height($(document).height()) // quando a pagina é carregada, aqui define o tamanho da altura do menu lateral
     $('#sidebar').toggleClass('active').click() //quando a pagina é carregada, este click esconde o menu lateral
-    $('#sidebarCollapse').on('click', function() {
+    $('#sidebarCollapse').on('click', function() { // clica no hamburger e fecha o menu lateral
         FechaMenuLateral()
     })
     if ($('#sidebar').hasClass('invisivel')) {
