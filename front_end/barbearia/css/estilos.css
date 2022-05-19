@@ -404,3 +404,8 @@ ul li:hover{
     flex-direction: row;
     justify-content: center;
 }
+
+.CorteCabelo{
+    margin-top: 22px;
+    padding: 30px;
+}
