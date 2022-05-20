@@ -50,7 +50,7 @@ h1 {
 
 body {
 
-    background-image: url(img/background_1164217.png);
+    background-image: url(../barbearia/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -130,7 +130,7 @@ button {
 
 button:hover {
 
-    background-color: #4169E180;
+    background-color: #222222;
     color: #ffffff;
     transition: all .5s ease-out;
 
@@ -171,7 +171,7 @@ a:hover {
     }
 
     body {
-        min-width: 260px ;
+        min-width: 260px;
         max-width: 375px;
 
     }
