@@ -33,6 +33,11 @@ $('.trocaPag').on('click', function(event) {
     }
 })
 
+$('#sidebar div ul li a').on('click', function(event) { // se clicar no menu lateral, clica no hamburguer
+    event.preventDefault()
+    $('#sidebarCollapse').click()
+})
+
 function carregaServicos() {
     // monta o html que vai pra página na variável "servico"
     var servico = '<div id="comp-j0xy9tgm" class="CorteCabelo"><h2 class="font_2" style="text-align:center; font-size:22px;"><span style="color:#FFCA26;">Corte de Cabelo</span></h2></div>'
