@@ -1,7 +1,7 @@
 (function($) {
     /*pegaNivelAcesso()   pode ser usado para restringir acesso ao menu*/
     aberturaHP()
-    var alturaConteudo = window.innerHeight - 150;
+    var alturaConteudo = window.innerHeight - 184;
     $('.conteudo').css("height", alturaConteudo)
     $('.logo_inicial').css("height", alturaConteudo)
     $('.logo_conteudo').css("height", alturaConteudo)

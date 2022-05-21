@@ -28,6 +28,14 @@
         justify-content: center;
         width: 100%;
     }
+    footer{
+        bottom: 0px;
+    }
+    .conteudo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 /* tela pequena - fim */
 
@@ -60,11 +68,11 @@ footer{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    height: 50px !important;
+    /*height: 80px !important;*/
     width: 100%;
     background: #222222;
-    position: fixed;
-    bottom: 0px;
+    /*position: fixed;*/
+    /*bottom: 0px;*/
     color: #fff;
 }
 
@@ -135,6 +143,9 @@ nav.nav-splash {
     height: 100vh;*/
     margin: 0 auto;
     /*padding-top: 100px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -466,12 +477,13 @@ ul li:hover{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
+    /*height: 100vh;*/
     margin: 0 auto;
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     /*max-width: auto;*/
-    /*display: flex;
-    justify-content: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-lb input {
