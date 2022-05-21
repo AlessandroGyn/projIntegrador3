@@ -59,3 +59,36 @@ function carregaServicos() {
     servico += '<div id="comp-j0xy9tfn" class="_1Q9if" data-testid="richTextElement"><p class="font_7" style="line-height:1.5em; text-align:center; font-size:17px;"><span style="color:#DEDEDE;">Tratamento capilar feito com produtos de alta qualidade. Alisa os cabelos e sela os fios, deixando o visual com um aspecto bastante natural.</span></p></div>'
     $('.conteudo').html(servico) // insere na página
 }
+
+function carregaAgendamentos() {
+    var Agendamentos = '<div class="ag_body">'
+    Agendamentos += '<div class="ag_container">'
+    Agendamentos += '<div class="ag_painel">'
+    Agendamentos += '<div class="ag_logo">'
+    Agendamentos += '<img class="ag_img" src="img/usuario.png" alt="">'
+    Agendamentos += '</div>'
+    Agendamentos += '<div>'
+    Agendamentos += '<h1 class="ag_h1" >Entrar</h1>'
+    Agendamentos += '</div>'
+    Agendamentos += '<div class="input-lb">'
+    Agendamentos += '<input type="text" name="usuario" id="usuario" placeholder="">'
+    Agendamentos += '<label for="usuario"> Usuario</label>'
+    Agendamentos += '</div>'
+    Agendamentos += '<div class="input-lb">'
+    Agendamentos += '<input type="password" name="senha" id="senha" placeholder="">'
+    Agendamentos += '<label for="senha">Senha</label>'
+    Agendamentos += '</div>'
+    Agendamentos += '<div class="ag_container">'
+    Agendamentos += '<button class="ag_button">Entrar</button>'
+    Agendamentos += '</div>'
+    Agendamentos += '<div class="ag_container">'
+    Agendamentos += '<hr class="ag_hr">'
+    Agendamentos += '</div>'
+    Agendamentos += '<div class="ag_container">'
+    Agendamentos += '<a class="ag_a" href="../cadastro2/index.html">cadastre-se</a>'
+    Agendamentos += '</div>'
+    Agendamentos += '</div>'
+    Agendamentos += '</div>'
+    Agendamentos += '</div>'
+    $('.conteudo').html(Agendamentos) // insere na página
+}
