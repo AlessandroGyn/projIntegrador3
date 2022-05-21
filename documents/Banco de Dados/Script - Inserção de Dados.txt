@@ -1,34 +1,49 @@
-insert into usuarios (Usu_Nome, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
-values ('Leonardo Valadão', 'Rua A', 'Setor E', '12345678', 'admin1', 'admin', 'Administrador');
-insert into usuarios (Usu_Nome, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
-values ('Divino Luis', 'Rua B', 'Setor D', '12345678', 'admin2', 'admin', 'Administrador');
-insert into usuarios (Usu_Nome, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
-values ('Alessandro Leite', 'Rua C', 'Setor C', '12345678', 'admin3', 'admin', 'Administrador');
-insert into usuarios (Usu_Nome, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
-values ('Gustavo Fonseca', 'Rua D', 'Setor B', '12345678', 'admin4', 'admin', 'Administrador');
-insert into usuarios (Usu_Nome, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
-values ('Saulo Sousa', 'Rua E', 'Setor A', '12345678', 'admin5', 'admin', 'Administrador');
+insert into Usuarios (Usu_Nome, Usu_Telefone, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
+values ('Leonardo Valadão', '11111111111', 'Rua A', 'Setor E', '12345678', 'admin1', 'admin', 'Administrador');
+insert into Usuarios (Usu_Nome, Usu_Telefone, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
+values ('Divino Luis', '22222222222', 'Rua B', 'Setor D', '12345678', 'admin2', 'admin', 'Administrador');
+insert into Usuarios (Usu_Nome, Usu_Telefone, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
+values ('Alessandro Leite', '33333333333', 'Rua C', 'Setor C', '12345678', 'admin3', 'admin', 'Administrador');
+insert into Usuarios (Usu_Nome, Usu_Telefone, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
+values ('Gustavo Fonseca', '44444444444', 'Rua D', 'Setor B', '12345678', 'admin4', 'admin', 'Administrador');
+insert into Usuarios (Usu_Nome, Usu_Telefone, Usu_End_Rua, Usu_End_Setor, Usu_End_CEP, Usu_Login, Usu_Senha, Usu_TipoAcesso) 
+values ('Saulo Sousa', '55555555555', 'Rua E', 'Setor A', '12345678', 'admin5', 'admin', 'Administrador');
 
-select * from usuarios;
+select * from Usuarios;
 
-insert into descontos (Des_Nome, Des_Descricao, Des_Validade, Des_Codigo, Des_TipoMultiplicador, Des_DescontoFixo, Des_DescontoMultiplicador)
-values ('Promoção dos Dias das Mães', 'Promoção de R$10 nos cortes de cabelo femininos no dia das mães', '2022-05-09', 'PromoMaes', false, -10, null);
-insert into descontos (Des_Nome, Des_Descricao, Des_Validade, Des_Codigo, Des_TipoMultiplicador, Des_DescontoFixo, Des_DescontoMultiplicador)
-values ('Promoção do Dia da Indepêndencia', 'Promoção de 50% nos cortes de cabelo no dia da independência', '2022-09-27', 'PromoMaes', true, null, 0.5);
-insert into descontos (Des_Nome, Des_Descricao, Des_Validade, Des_Codigo, Des_TipoMultiplicador, Des_DescontoFixo, Des_DescontoMultiplicador)
-values ('Promoção Corte de Cabelo de Graça', 'Promoção de corte de cabelo de graça', '2022-05-09', 'PromoMaes', true, null, 0);
+insert into Servicos (Ser_Nome, Ser_Descricao, Ser_Preco)
+values ('Corte Masculino', 'Corte de Cabelo Masculino', 35.00);
+insert into Servicos (Ser_Nome, Ser_Descricao, Ser_Preco)
+values ('Corte de Barba', 'Corte de Barba', 15.00);
+insert into Servicos (Ser_Nome, Ser_Descricao, Ser_Preco)
+values ('Corte Feminino', 'Corte de Cabelo Feminino', 50.00);
 
-select * from descontos;
+select * from Servicos;
 
-insert into agendamentos (Age_DataHoraMarcado, Age_DataHoraInicio, Age_DataHoraTermino, Age_FoiCancelado, Age_DuracaoEsperada, Age_DuracaoReal, Age_PrecoFinal, fk_Usuarios_Usu_ID, fk_Descontos_Des_ID)
-values ('2022-05-08 08:10:00  -03:00', '2022-05-08 09:40:00  -03:00', '2022-05-08 12:40:00  -03:00', false, '1 hours', '2 hours 1 min', 100.50, 1, 1);
-insert into agendamentos (Age_DataHoraMarcado, Age_DataHoraInicio, Age_DataHoraTermino, Age_FoiCancelado, Age_DuracaoEsperada, Age_DuracaoReal, Age_PrecoFinal, fk_Usuarios_Usu_ID, fk_Descontos_Des_ID)
-values ('2022-05-08 09:30:00  -03:00', '2022-05-08 010:40:00  -03:00', '2022-05-08 13:40:00  -03:00', false, '20 mins', '2 hours 1 min', 0.50, 2, null);
-insert into agendamentos (Age_DataHoraMarcado, Age_DataHoraInicio, Age_DataHoraTermino, Age_FoiCancelado, Age_DuracaoEsperada, Age_DuracaoReal, Age_PrecoFinal, fk_Usuarios_Usu_ID, fk_Descontos_Des_ID)
-values ('2022-05-08 10:20:00  -03:00', '2022-05-08 11:40:00  -03:00', '2022-05-08 14:40:00  -03:00', true, '24 hours', '2 hours 1 min', 10, 3, 2);
-insert into agendamentos (Age_DataHoraMarcado, Age_DataHoraInicio, Age_DataHoraTermino, Age_FoiCancelado, Age_DuracaoEsperada, Age_DuracaoReal, Age_PrecoFinal, fk_Usuarios_Usu_ID, fk_Descontos_Des_ID)
-values ('2022-05-08 11:40:00  -03:00', '2022-05-08 12:40:00  -03:00', '2022-05-08 22:40:00  -03:00', true, '1 min', '2 hours 1 min', 1000, 4, null);
-insert into agendamentos (Age_DataHoraMarcado, Age_DataHoraInicio, Age_DataHoraTermino, Age_FoiCancelado, Age_DuracaoEsperada, Age_DuracaoReal, Age_PrecoFinal, fk_Usuarios_Usu_ID, fk_Descontos_Des_ID)
-values ('2022-05-08 12:00:00  -03:00', '2022-05-08 13:40:00  -03:00', '2022-05-08 23:40:00  -03:00', false, '1 hour', '2 hours 1 mins', 12345.67, 5, 3);
+insert into agendamentos (Age_DataHoraMarcado, Age_FoiCancelado, Age_PrecoFinal, fk_Usuarios_Usu_ID)
+values ('2022-07-08 08:10:00  -03:00', false, 100.50, 1);
+insert into agendamentos (Age_DataHoraMarcado, Age_FoiCancelado, Age_PrecoFinal, fk_Usuarios_Usu_ID)
+values ('2022-07-09 09:10:00  -03:00', true, 110.50, 2);
+insert into agendamentos (Age_DataHoraMarcado, Age_FoiCancelado, Age_PrecoFinal, fk_Usuarios_Usu_ID)
+values ('2022-07-10 10:10:00  -03:00', false, 120, 3);
+insert into agendamentos (Age_DataHoraMarcado, Age_FoiCancelado, Age_PrecoFinal, fk_Usuarios_Usu_ID)
+values ('2022-07-11 11:10:00  -03:00', false, 130.50, 4);
+insert into agendamentos (Age_DataHoraMarcado, Age_FoiCancelado, Age_PrecoFinal, fk_Usuarios_Usu_ID)
+values ('2022-07-12 12:10:00  -03:00', false, 140.00, 5);
 
 select * from agendamentos;
+
+insert into ServicosAgendados (SerAge_Preco, SerAge_Quantidade, FK_Servicos_Ser_ID, FK_Agendamentos_Age_ID)
+values (35, 1, 1, 1);
+insert into ServicosAgendados (SerAge_Preco, SerAge_Quantidade, FK_Servicos_Ser_ID, FK_Agendamentos_Age_ID)
+values (15, 1, 2, 2);
+insert into ServicosAgendados (SerAge_Preco, SerAge_Quantidade, FK_Servicos_Ser_ID, FK_Agendamentos_Age_ID)
+values (50, 1, 3, 3);
+insert into ServicosAgendados (SerAge_Preco, SerAge_Quantidade, FK_Servicos_Ser_ID, FK_Agendamentos_Age_ID)
+values (35, 1, 1, 1);
+insert into ServicosAgendados (SerAge_Preco, SerAge_Quantidade, FK_Servicos_Ser_ID, FK_Agendamentos_Age_ID)
+values (15, 1, 2, 1);
+insert into ServicosAgendados (SerAge_Preco, SerAge_Quantidade, FK_Servicos_Ser_ID, FK_Agendamentos_Age_ID)
+values (50, 1, 3, 2);
+
+select * from ServicosAgendados;
