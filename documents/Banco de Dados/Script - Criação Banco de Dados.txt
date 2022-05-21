@@ -17,6 +17,7 @@ CREATE TABLE Agendamentos (
     Age_DataHoraMarcado TIMESTAMPTZ,
     Age_FoiCancelado BOOLEAN,
     Age_PrecoFinal DOUBLE PRECISION,
+    Age_DuracaoFinal INTERVAL,
     fk_Usuarios_Usu_ID SERIAL
 );
 
@@ -24,13 +25,15 @@ CREATE TABLE Servicos (
     Ser_ID SERIAL PRIMARY KEY,
     Ser_Nome VARCHAR(50),
     Ser_Descricao VARCHAR(150),
-    Ser_Preco DOUBLE PRECISION
+    Ser_Preco DOUBLE PRECISION,
+    Ser_DuracaoMedia INTERVAL
 );
 
 CREATE TABLE ServicosAgendados (
     SerAge_ID SERIAL PRIMARY KEY,
     SerAge_Preco DOUBLE PRECISION,
     SerAge_Quantidade INTEGER,
+    SerAge_Duracao INTERVAL,
     fk_Servicos_Ser_ID SERIAL,
     fk_Agendamentos_Age_ID SERIAL
 );
