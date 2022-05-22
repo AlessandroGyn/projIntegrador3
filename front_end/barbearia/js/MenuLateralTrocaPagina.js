@@ -85,10 +85,92 @@ function carregaAgendamentos() {
     Agendamentos += '<hr class="ag_hr">'
     Agendamentos += '</div>'
     Agendamentos += '<div class="ag_container">'
-    Agendamentos += '<a class="ag_a" href="../cadastro2/index.html">cadastre-se</a>'
+    Agendamentos += '<span class="ag_a" >cadastre-se</span>'
     Agendamentos += '</div>'
     Agendamentos += '</div>'
     Agendamentos += '</div>'
     Agendamentos += '</div>'
     $('.conteudo').html(Agendamentos) // insere na página
 }
+
+function carregaMidia() {
+    // monta o html que vai pra página na variável "midia"
+    var midia = '<div id="comp-j0xy9tgm" class="CorteCabelo"><h2 class="font_2" style="text-align:center; font-size:22px;"><span style="color:#FFCA26;">Mídia</span></h2></div>'
+    midia += '<div id="comp-j0xy9tgn" class="_1Q9if" data-testid="richTextElement">'
+    midia += '<p class="font_7" style="line-height:1.5em; text-align:center; font-size:17px;">'
+    midia += '<span style="color:#DEDEDE;">O corte de cabelo realizado com a excelência dos mestres barbeiros. Escolha entre o clássico corte social ou um moderno&nbsp;corte com&nbsp;degradê. Sua imagem valorizada como deve ser!</span>'
+    midia += '</p></div>'
+    $('.conteudo').html(midia) // insere na página
+}
+
+function carregaQuemSomos() {
+    // monta o html que vai pra página na variável "quemSomos"
+    var quemSomos = '<div id="comp-j0xy9tgm" class="CorteCabelo"><h2 class="font_2" style="text-align:center; font-size:22px;"><span style="color:#FFCA26;">Quem Somos</span></h2></div>'
+    quemSomos += '<div id="comp-j0xy9tgn" class="_1Q9if" data-testid="richTextElement">'
+    quemSomos += '<p class="font_7" style="line-height:1.5em; text-align:center; font-size:17px;">'
+    quemSomos += '<span style="color:#DEDEDE;">O corte de cabelo realizado com a excelência dos mestres barbeiros. Escolha entre o clássico corte social ou um moderno&nbsp;corte com&nbsp;degradê. Sua imagem valorizada como deve ser!</span>'
+    quemSomos += '</p></div>'
+    $('.conteudo').html(quemSomos) // insere na página
+}
+
+function carregaContato() {
+    // monta o html que vai pra página na variável "contato"
+    var contato = '<div id="comp-j0xy9tgm" class="CorteCabelo"><h2 class="font_2" style="text-align:center; font-size:22px;"><span style="color:#FFCA26;">Contato</span></h2></div>'
+    contato += '<div id="comp-j0xy9tgn" class="_1Q9if" data-testid="richTextElement">'
+    contato += '<p class="font_7" style="line-height:1.5em; text-align:center; font-size:17px;">'
+    contato += '<span style="color:#DEDEDE;">O corte de cabelo realizado com a excelência dos mestres barbeiros. Escolha entre o clássico corte social ou um moderno&nbsp;corte com&nbsp;degradê. Sua imagem valorizada como deve ser!</span>'
+    contato += '</p></div>'
+    $('.conteudo').html(contato) // insere na página
+}
+
+$(document).on('click', '.ag_a', function(event){
+    event.preventDefault()
+    // monta o html que vai pra página na variável "cadastro" - cria tela Cadastro
+    var cadastro = '<div class="cad_body">'
+    cadastro += '<div class="cad_container">'
+    cadastro += '<div class="cad_painel">'
+    cadastro += '<div class="cad_logo">'
+    cadastro += '<img src="img/usuario.png">'
+    cadastro += '</div>'
+    cadastro += '<div>'
+    cadastro += '<h1 class="cad_h1">Cadastrar</h1>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_input-lb">'
+    cadastro += '<input type="text" class="cad_cpf" id="cad_cpf">'
+    cadastro += '<label for="cad_cpf">CPF</label>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_input-lb">'
+    cadastro += '<input type="text" id="cad_nome">'
+    cadastro += '<label for="cad_nome">Nome</label>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_input-lb">'
+    cadastro += '<input type="text" id="cad_sobrenome">'
+    cadastro += '<label for="cad_sobrenome">Sobrenome</label>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_input-lb">'
+    cadastro += '<input type="password" id="cad_senha">'
+    cadastro += '<label for="cad_senha">Senha</label>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_input-lb">'
+    cadastro += '<input type="password" id="cad_confirmsenha">'
+    cadastro += '<label for="cad_confirmsenha">Confirme a senha</label>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_container">'
+    cadastro += '<button class="cad_btnConcluir">Concluir</button>'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_container">'
+    cadastro += '<hr class="cad_hr">'
+    cadastro += '</div>'
+    cadastro += '<div class="cad_container">'
+    cadastro += '<button class="cad_btnLogin">Log in</button>' //CRIAR UMA CLASSE... de click... que direciona para função que carrega a tela login
+    cadastro += '</div>'
+    cadastro += '</div>'
+    cadastro += '</div>'
+    cadastro += '</div>'
+    $('.conteudo').html(cadastro) // insere na página
+})
+
+$(document).on('click', '.cad_btnLogin', function(event){
+    event.preventDefault()
+    carregaAgendamentos()
+})    
