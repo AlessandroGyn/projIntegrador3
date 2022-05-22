@@ -1,11 +1,14 @@
-const {Client} = require('pg')
+// Dependências:
+const { Client } = require("pg");
 
-const cliente = new Client({ 
-    host: "localhost", // Endereço do Host
-    user: "postgres", // Usuário do PostgresSQL
-    password: "admin", // Senha do usuário do PostgresSQL
-    port: 5432, // Porta do PostgresSQL
-    database: "postgres" // Database do App no PostegreSQL
-})
+// Conexão com o banco de dados PostegreSQL. 
+const cliente = new Client({
+  host: "localhost", // Endereço do Host.
+  user: "postgres", // Usuário do PostgresSQL.
+  password: "admin", // Senha do usuário do PostgresSQL.
+  port: 5432, // Porta do PostgresSQL.
+  database: "postgres", // Database do App no PostegreSQL.
+});
 
-module.exports = cliente
+// Exportação da variável Cliente.
+module.exports = cliente;

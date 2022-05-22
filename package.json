@@ -1,7 +1,40 @@
 {
-  "dependencies": {
-    "body-parse": "^0.1.0",
-    "express": "^4.18.1",
-    "pg": "^8.7.3"
-  }
+    "name": "projintegrador3",
+    "version": "1.0.0",
+    "description": "Projeto Integrador do 3º Semestre do curso de Análise e Desenvolvimento de Sistemas",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon ./back_end/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlessandroGyn/projIntegrador3.git"
+    },
+    "keywords": [
+        "Projeto",
+        "Integrador",
+        "SENAC",
+        "Goiás",
+        "Agendamento",
+        "Agenda",
+        "Barbearia",
+        "Serviço",
+        "Serviços"
+    ],
+    "author": "Leonardo Valadão (leo-valadao), Alessandro Leite (AlessandroGyn), Divino Luiz (juniorwar360), Gustavo Fonseca (slash621) e Saulo Souza (saulo-maker)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AlessandroGyn/projIntegrador3/issues"
+    },
+    "homepage": "https://github.com/AlessandroGyn/projIntegrador3#readme",
+    "dependencies": {
+        "body-parse": "^0.1.0",
+        "express": "^4.18.1",
+        "express-session": "^1.17.3",
+        "googleapis": "^100.0.0",
+        "nodemon": "^2.0.16",
+        "passport": "^0.6.0",
+        "passport-google-oauth20": "^2.0.0",
+        "pg": "^8.7.3"
+    }
 }
