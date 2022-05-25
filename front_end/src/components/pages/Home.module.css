@@ -1,0 +1,52 @@
+.Home{
+    width: 100%;
+    /*min-height: 75vh;*/
+}
+
+.Backvideo{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    object-fit: cover;
+}
+
+.content{
+    position: absolute;
+    margin-top: 300px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+.btnAgendar {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btnAgendar:hover {
+    background: #ddd;
+    color: black;
+  }
+  .btnAgendar a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  .btnAgendar a:hover {
+    color: #000;
+  }
