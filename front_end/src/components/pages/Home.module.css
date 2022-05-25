@@ -1,16 +1,6 @@
 .Home{
     width: 100%;
-    /*min-height: 75vh;*/
-}
-
-.Backvideo{
-    position: relative;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -99;
-    object-fit: cover;
+    min-height: 70vh;
 }
 
 .content{
@@ -26,10 +16,19 @@
     color: #fff;
 }
 
+.content h1 {
+  padding-bottom: 20px;
+}
 
+.content p {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* botão AGENDAR - início */
 .btnAgendar {
     width: 200px;
-    font-size: 18px;
+    font-size: 20px;
     padding: 10px;
     border: none;
     background: #000;
@@ -41,12 +40,64 @@
     background: #ddd;
     color: black;
   }
-  .btnAgendar a {
-    color: #fff;
-    font-size: 17px;
-    font-weight: bolder;
+  .Link {
     text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
   }
-  .btnAgendar a:hover {
+
+  .Link:hover {
     color: #000;
   }
+
+  
+  /* botão AGENDAR - fim */
+
+  /* animação aparecimento do video de background - inicio */
+  .Backvideo{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    object-fit: cover;
+    animation: fadein 10s;
+    -moz-animation: fadein 10s; /* Firefox */
+    -webkit-animation: fadein 10s; /* Safari and Chrome */
+    -o-animation: fadein 10s; /* Opera */
+}
+ 
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+/* animação aparecimento do video de background - fim */
