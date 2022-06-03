@@ -5,7 +5,7 @@
     "pg": "^8.7.3"
   },
   "scripts": {
-    "start": "node /Graduacao_Senac_Curso_2021/ads3/Projeto Integrador/FrontEnd/projIntegrador3/front_end/barbearia/proj_node/appNode.js"
+    "start": "/projIntegrador3/front_end/src/index.js"
   }
 }
 

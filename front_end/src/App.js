@@ -1,3 +1,5 @@
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
 import './index.css';
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'

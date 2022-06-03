@@ -1,9 +1,25 @@
-function Agendamento() {
+import React from 'react';
+
+import Scheduler from 'devextreme-react/scheduler';
+
+import { data } from './data.js';
+
+const currentDate = new Date();
+const views = ['week', 'month'];
+
+class Agendamento extends React.Component {
+  render() {
     return (
-        <div>
-            <h1>Agendamento</h1>
-            <p>Nesta página - primeiro login/cadastro - depois agendamento</p>
-        </div>
-    )
+      <Scheduler
+        timeZone="Brazil"
+        dataSource={data}
+        views={views}
+        defaultCurrentView="week"
+        defaultCurrentDate={currentDate}
+        height={600}
+        startDayHour={9} />
+    );
+  }
 }
-export default Agendamento
+
+export default Agendamento;
